@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f3f6;
+        }
+
+        /* Header */
+        header {
+            background-color: #2874f0;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        header .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        header .user-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 15px 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        nav ul li:hover {
+            background-color: #f1f3f6;
+        }
+
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .categories a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Banner Carousel */
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            margin: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .carousel img {
+            width: 100%;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        /* Product Carousel */
+        .product-carousel {
+            margin: 20px;
+            overflow: hidden;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-carousel h2 {
+            margin-bottom: 20px;
+        }
+
+        .product-carousel .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .product-carousel .item {
+            min-width: 150px;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .product-carousel .item img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 10px;
+        }
+
+        .product-carousel .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .product-carousel .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2874f0;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Flipkart</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for Products, Brands and More">
+        </div>
+        <div class="user-actions">
+            <a href="#" style="color: white;">Login</a>
+            <a href="#" style="color: white;">Cart</a>
+            <a href="#" style="color: white;">Become a Seller</a>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Categories -->
+    <div class="categories">
+        <a href="#">Top Offers</a>
+        <a href="#">Mobiles & Tablets</a>
+        <a href="#">TVs & Appliances</a>
+        <a href="#">Electronics</a>
+        <a href="#">Fashion</a>
+        <a href="#">Beauty</a>
+        <a href="#">Home & Kitchen</a>
+        <a href="#">Furniture</a>
+        <a href="#">Travel</a>
+        <a href="#">Grocery</a>
+    </div>
+
+    <!-- Banner Carousel -->
+    <div class="carousel">
+        <img src="https://images.news9live.com/wp-content/uploads/2023/10/Amitabh-Bachchan-in-the-Flipkart-ad.-X.jpg" alt="Banner">
+        <div class="carousel-buttons">
+            <button>&lt;</button>
+            <button>&gt;</button>
+        </div>
+    </div>
+
+    <!-- Product Carousel -->
+    <div class="product-carousel">
+        <h2>Top Products</h2>
+        <div class="carousel-track">
+            <div class="item">
+                <img src="https://th.bing.com/th?q=Flipkart+iPhone+Product+Images&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Product 1">
+                <p>Product 1</p>
+            </div>
+            <div class="item">
+                <img src="https://www.bing.com/th?id=OPAC.Kk36bP13Uc8cfw474C474&o=5&pid=21.1&w=148&h=231&rs=1&qlt=100&dpr=1.3&bw=6&bc=FFFFFF" alt="Product 2">
+                <p>Product 2</p>
+            </div>
+            <div class="item">
+                <img src="https://www.bing.com/th?id=OPAC.ik8gEeZKFmcKkg474C474&o=5&pid=21.1&w=124&h=146&rs=1&qlt=100&dpr=1.3&bw=6&bc=FFFFFF" alt="product 3">
+                <p>Product 3</p>
+            </div>
+            <div class="item">
+                <img src="https://th.bing.com/th?id=OPAC.tHF27vQWRaq2Cw474C474&w=220&h=220&c=17&o=5&dpr=1.3&pid=21.1" alt="Product 4">
+                <p>Product 4</p>
+            </div>
+            <div class="item">
+                <img src="https://th.bing.com/th?id=OPAC.zw%2bwhPfdjtqydg474C474&w=166&h=166&c=17&dpr=1.3&pid=21.1" alt="Product 5">
+                <p>Product 5</p>
+            </div>
+        </div>
+        <div class="carousel-buttons">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Flipkart Clone. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const track = document.querySelector('.product-carousel .carousel-track');
+        const prevButton = document.querySelector('.product-carousel .prev');
+        const nextButton = document.querySelector('.product-carousel .next');
+
+        let currentIndex = 0;
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                track.style.transform = `translateX(-${currentIndex * 170}px)`;
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < track.children.length - 3) {
+                currentIndex++;
+                track.style.transform = `translateX(-${currentIndex * 170}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
+d
